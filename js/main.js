@@ -86,10 +86,13 @@ $(document).ready(function(){
         setTimeout(function () {   
             hdr_img.remove('hdr-img-animate');
         }, 1500);
-
-        
+    }
+    
+    var nav_list = document.getElementsByClassName("nav-menu");
+    if(nav_list.length > 0)
+    {
         var nav_bg = document.getElementById("nav-bg").classList,
-        nav = document.getElementsByClassName("nav-menu")[0];       
+        nav = nav_list[0];       
         //var bg_list = document.getElementsByClassName("color-bg");
         $('.menu-bt').click(function(){
             if(nav_bg.contains('nav-anim')){ 
